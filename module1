@@ -1,0 +1,24 @@
+ <html>
+<head>
+    <title>Flashcard Module</title>
+</head>
+<body>
+
+    <h2>Language Learning Flashcard</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="front">
+                <p>Apple</p>
+            </div>
+
+            <div class="back">
+                <p>सेब</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
