@@ -1,0 +1,81 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flashcard Language App</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+<h2>Language Learning Flashcard</h2>
+<div class="card-container">
+    <div class="card" id="flashcard">
+        <div class="card-side front" id="frontText">Apple</div>
+        <div class="card-side back" id="backText">सेब</div>
+    </div>
+</div>
+<button onclick="nextCard()">Next Card</button>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    background: lightblue;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.card-container {
+    perspective: 1000px;
+}
+.card {
+    width: 250px;
+    height: 150px;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+.card-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.front {
+    background: green;
+}
+
+.back {
+    background: purple;
+    transform: rotateY(180deg);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: pink;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: lightblue;
+}
